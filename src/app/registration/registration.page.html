@@ -1,0 +1,167 @@
+<!-- <ion-header>
+  <ion-toolbar color="white-instagram-icon-png">  
+    <ion-buttons slot="start">  
+    <ion-menu-button color="dark"></ion-menu-button>   
+    </ion-buttons>   -->
+
+    <!-- <div class="headercont">
+      <ion-icon (click)="back()" class="backlogo" name="arrow-back-outline"></ion-icon>
+      <div class="headertitle">Registration</div> -->
+
+    <!-- </div> 
+  </ion-toolbar>
+</ion-header> -->
+
+
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+  <ion-title>signup</ion-title> 
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="login" text="">
+      </ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+<ion-content>
+  
+  <div class="background-pic">
+    <div class="background-filter">
+
+    <ion-card>
+      <ion-card-content>
+        <!-- <div class="login-header">
+         
+          <img class="logon-img" src="/assets/img/lau.jpg" alt="">
+        </div> -->
+    <!-- <ion-card class="ion-no-margin"> -->
+        <ion-card-header>
+            <ion-card-title>
+              Sign Up
+            </ion-card-title>
+        </ion-card-header>
+             
+    
+     <form [formGroup]="ValidationFormUSer" (ngSubmit)="registerUser(ValidationFormUSer.value)">
+      <div class="input-group">
+       <!-- <div class="input-group"> -->
+
+        <!-- <ion-item>
+          <ion-input name="names" type="text" placeholder="FullName" formControlName="names">
+            <ion-icon name="person-outline"  ></ion-icon>
+          </ion-input>
+         </ion-item>
+            <div>
+           <ng-container *ngFor="let validation of validationMessages.names">
+             <p class="error_message" *ngIf="ValidationFormUSer.get('names').hasError(validation.type) && (ValidationFormUSer.get('names').dirty || ValidationFormUSer.get('names').touched)">
+                 {{validation.message}}
+             </p>
+            </ng-container>
+          </div> -->
+
+
+      <ion-item>
+          <ion-input name="unitno" type="text" placeholder="Unit Number eg G-2, 1-2" formControlName="unitno">
+            <ion-icon name="home-outline"></ion-icon>
+          </ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let validation of validationMessages.unitno">
+          <p class="error_message" *ngIf="ValidationFormUSer.get('unitno').hasError(validation.type) && (ValidationFormUSer.get('unitno').dirty || ValidationFormUSer.get('unitno').touched)">
+              {{validation.message}}
+          </p>
+         </ng-container>
+      </div>
+
+      <ion-item>
+          <ion-input name="email" type="text" placeholder="Email" formControlName="email">
+            <ion-icon name="mail-outline" ></ion-icon>
+          </ion-input>
+      </ion-item>
+      <div>
+      <ng-container *ngFor="let validation of validationMessages.email">
+        <p class="error_message" *ngIf="ValidationFormUSer.get('email').hasError(validation.type) && (ValidationFormUSer.get('email').dirty || ValidationFormUSer.get('email').touched)">
+            {{validation.message}}
+        </p>
+       </ng-container>
+      </div>
+
+
+      <ion-item>
+          <ion-input name="password" type="password" placeholder="************" formControlName="password">
+            <ion-icon name="lock-closed" ></ion-icon>
+          </ion-input>
+      </ion-item>
+
+    <div>
+      <ng-container *ngFor="let validation of validationMessages.password">
+        <p class="error_message" *ngIf="ValidationFormUSer.get('password').hasError(validation.type) && (ValidationFormUSer.get('password').dirty || ValidationFormUSer.get('password').touched)">
+            {{validation.message}}
+        </p>
+       </ng-container>
+      </div>
+
+
+            <!-- <ion-item class="ion-username">
+              <ion-label position ='stacked'>Email</ion-label> 
+              <ion-input name="email" placeholder="email" type="email" [(ngModel)]="userprofile['email']">
+             <ion-icon class="ion-person" name="person-outline" slot="start"></ion-icon>
+               </ion-input>
+             </ion-item>
+
+      <ion-item class="ion-pwd">
+        <ion-label position ='stacked'>Password</ion-label> 
+        <ion-input name="password" placeholder="password" type="password" [(ngModel)]="userprofile['password']">
+          <ion-icon class="ion-lock" name="lock-closed-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item class="ion-unitno">
+        <ion-input name="unitno" placeholder="unitno" type="text" [(ngModel)]="userprofile['unitno']">
+          <ion-icon class="ion-lock" name="lock-closed-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item> -->
+
+  <!-- <ion-item>
+    <ion-label position="floating">Phone Number (e.g 6012345678) </ion-label>
+    <ion-input type="number" [(ngModel)]="userprofile['phone']"></ion-input>    
+  </ion-item> -->
+
+ 
+  <!-- <ion-item style="margin-top: 20px;">
+    <ion-label stacked>Date of Birth</ion-label>
+   <ion-datetime type="date" 
+      name="dob" [(ngModel)]="userprofile['DOB']"  displayFormat="DD-MM-YYYY"  >
+      
+   </ion-datetime>
+  </ion-item> -->
+
+
+  <!-- <ion-button (click)="register()" class="register" expand="full" color="primary">Create account</ion-button> -->
+  <!-- <ion-button shape="round" type="submit" class="sign-btn" fill="solid"
+  (click)="register()"  [disabled]="!ValidationFormUSer.valid">Sign Up</ion-button> -->
+  <div class="bottom-section">
+  <!-- <div class="sign-btn-wrap"> -->
+    <ion-button  shape="round" type="submit"  fill="solid" class="sign-btn" 
+    [disabled]="!ValidationFormUSer.valid">Sign Up</ion-button>
+   </div>
+
+
+
+</div>  
+</form>
+</ion-card-content>
+</ion-card>
+</div>
+</div>
+</ion-content>
+
+
+
+<!----------------------------------------------------------------------------------------------------------------------------->
+
+
+

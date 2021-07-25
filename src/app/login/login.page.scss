@@ -1,0 +1,246 @@
+.login-header{
+  // background-color: fade-out($color: #378ae9da, $amount: 0);
+  //  background-color: fade-in($color: white, $amount: 0);;
+   // background-color: white;
+   justify-content: center;         //make the logon-img postion in center 
+   display: flex;                   //make the logon-img postion in center
+   // padding: 10px;
+   // height: 30vh;
+   align-items: center;
+   background: transparent;
+   width: 100vw;
+ }
+   .logon-img{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 100%;    // to make the round picture
+   }
+
+ ion-content{
+  --ion-background-color:#fff;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.background-pic{
+  height: 100vh;
+  width: 100%;
+  background: url('/assets/img/lau3.jpg');
+  background-position: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-filter{
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+// .shape{
+//   position: fixed;
+//   top:0;
+//   right: 0;
+
+//   img{
+//       opacity: 0.9;
+//   }
+// }
+
+ion-card{
+  margin-top: 130px;
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+
+  // ion-card-title{
+  //     color:#242020;
+  //     font-size: 30px;
+  // }
+
+  // ion-card-subtitle{
+  //     color:#BBBBBB;
+  //     font-size: 14px;
+  //     font-weight: 400; 
+
+  //     a{
+  //         text-decoration: none;
+  //         font-weight: bold;
+  //         color: #198645;
+  //         font-size: 15;
+  //     }
+  // }
+
+  ion-card-content{
+      margin-top: 30px;
+
+      ion-item{
+          --ion-item-background:transparent;
+          --border-width:0;
+          --inner-border-width:0;
+          --highlight-color-focused:none;
+          margin-bottom: 15px;
+
+          ion-input{
+              width:257px;
+              height: 42px;
+              border-radius: 15px;
+              border:  1px solid #198645;
+              font-size: 14px;
+              font-weight: 300;
+              color:#555B5B;
+              --padding-start:30px;
+          }
+
+      }
+
+      a{
+          text-decoration: none;
+          color:#589B3F;
+          font-weight: 300;
+          font-size: 13px;
+      }
+  }
+
+  .bottom-section{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ion-button{
+  height: 53px;
+  width: 247px;
+  font-size: 14px;
+  text-transform: none;
+  --background:#198645;
+    font-weight: 400;
+  --border-radius: 15px !important;
+    color:#fff;
+  }
+
+  span{
+      margin-top: 10px;
+      font-weight: 330;
+      a{
+          font-weight: 400;
+      }
+  }
+  }
+
+}
+
+ 
+.ion-forget-password{
+   
+  //align-items: flex-end;
+  text-align: end;
+  font-size: 13px;
+  color:rgb(168, 164, 164);   
+  margin-right: 50px;
+  display: block;         //why can't use display= flex  ??? why without this the text will move to left?
+  }
+
+.ion-text-noaccount{
+ text-align: center;        
+ // align-items: center; 
+ color : #3773f5   ;
+ display: block;           //why can't use display= flex  ??? why without this the text will move to left?
+ font-size: 13px;
+}
+
+p {
+ font-size: 0.8em;
+ color: #f36d6d;
+}
+
+
+ion-label, .select-text {
+ margin-left: 10px;
+}
+
+.invalid {
+ border: 1px solid #ea6153;
+}
+
+.signin{
+ //  background-color: fade-in($color: #3773f5, $amount: 0);;
+  justify-content: center;         //make the logon-img postion in center 
+  display: flex;                   //make the logon-img postion in center
+  border-radius: 100px;
+  //width: calc(100vw - 20px - 20px);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+//  .login-content {
+//   // background-color: fade-out($color: #378ae9da, $amount: 0);
+//    background-color: fade-in($color: rgb(8, 6, 6), $amount: 0);;
+//    // background-color: white;
+//   //  justify-content: center;         //make the logon-img postion in center 
+//   //  display: flex;                   //make the logon-img postion in center
+//   //  // padding: 10px;
+//   //  // height: 30vh;
+//   //  align-items: center;
+//    width: 100vw;
+//    height: max-content;
+   
+//  }
+
+
+//  .logon-img{
+//    // display: flex;
+//    width: 90px;
+//    height: 90px;
+//    margin-top: 70px;
+//    margin-bottom: 50px;
+//   border-radius: 100%;    // to make the round picture
+  
+  
+//  }
+
+   //SET BACKGROUND IMAGES
+  //  ion-content {
+  //   background-color: fade-in($color: rgb(8, 6, 6), $amount: 0);
+  //  }
+    // ion-content {
+    //     --background: url(../../assets/img/lau.JPG) no-repeat center/cover fixed;
+    // }
+
+  //  .ion-username{
+  //    margin-left: 50px;
+  //    margin-right: 50px;
+  //    margin-top: 50px; 
+  //  }
+  //  .ion-pwd{
+  //   margin-left: 50px;
+  //   margin-right: 50px;
+  //   margin-top: 20px;  
+  //  }
+  
+  //MUST READ : https://forum.ionicframework.com/t/click-event-doesnt-work-while-input-element-is-focused/132898/2
+  //  .passwordIcon {
+  //   position: relative !important;
+  //   top: 0 !important;
+  //   margin: 0 auto !important;
+  //   font-size: 24px !important;
+  //   color: #262626;
+  //   }
+
+
+ 
+
+
+// ion-slides {
+// height: 100%;
+// }
+
+// ion-slide {
+//   display: block;
+// }

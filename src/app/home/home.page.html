@@ -1,0 +1,113 @@
+
+<ion-header>  
+  <ion-toolbar color="white-instagram-icon-png">  
+   <ion-buttons slot="start">  
+   <ion-menu-button color="dark"></ion-menu-button>   
+   </ion-buttons>  
+
+  
+  <div style="display: flex; padding: 20px ; background-color:white; box-shadow: 1px 1px 10px rgb(0,0,0,0.137);">
+    <!-- <ion-icon (click)="backtohome()" class="backbutton" name="chevron-back-outline"></ion-icon> -->
+    <div class="title">Resident Dashboard</div>
+  </div>
+
+
+   <!-- <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" (ionInput)="filterList($event)"></ion-searchbar> 
+   <ion-searchbar type="text" debounce="500" (ionChange)="getItems($event)"></ion-searchbar>
+   <ion-list *ngIf="isItemAvailable">
+       <ion-item *ngFor="let item of items">{{ item }}</ion-item>
+   </ion-list> -->
+
+ </ion-toolbar>    
+</ion-header> 
+
+<ion-content>
+  <!-- <ion-card>
+   
+  <ion-card-content> -->
+
+  <!-- <div class="login-content"> -->
+  <!--  <ion-list no lines class="inputs">  -->
+
+    <ion-item class="unitno">
+      <ion-label stacked class="uni-label" position="stacked">Enter Your Unit No :</ion-label>
+        <ion-input name="unitno" placeholder="unitno" type="text" [(ngModel)]="getprofile.unitno"></ion-input>
+      </ion-item>
+
+      <!-- <ion-row>
+        <ion-input type="number" style="border-bottom: 1px solid #000;max-width: 50%;"></ion-input>
+        <p>pounds</p>
+   </ion-row> -->
+   <div class="bottom-section">
+    <!-- <ion-item class="submit"> -->
+      <ion-button  class="submit" (click)="submit()">Submit</ion-button>
+    <!-- </ion-item> -->
+  
+  </div>
+<!-- </ion-card-content>
+</ion-card> -->
+
+
+    <div class="table-head">
+      <h4>Parcel list</h4>
+    </div>
+  
+      
+   <ion-grid>
+    <ion-row size ='5'>
+    <ion-col size="12" class="ion-padding-top">
+          <ion-row>
+            <!-- <ion-col class="table-header" size="1"><b>#</b></ion-col> -->
+            <ion-col class="table-header" size="3"><b>Unit No</b></ion-col>
+            <ion-col class="table-header" size="3"><b>Tracking No</b></ion-col>
+            <ion-col class="table-header" size="3"><b>Date</b></ion-col>  
+            <ion-col class="table-header" size="3"><b>Action</b></ion-col>
+          </ion-row>
+  
+  
+          <ion-row *ngFor="let item of postArray; let idx = index" class="text-content">
+            <!-- <ion-col class="table-cell text-content-small" size="1">{{idx + 1}}</ion-col> -->
+            <ion-col class="table-cell" size="3">{{item.unitno}}</ion-col>
+            <ion-col class="table-cell" size="3">{{item.trackno}}</ion-col>
+            <!-- <ion-col class="table-cell" size="3">{{item.mydate}}</ion-col> -->
+            <ion-col class="table-cell" size="3">{{item.tdate | date: 'yyyy-MM-dd'}}</ion-col>
+            <ion-col class="table-cell" size="3">
+            <!-- <button class="btn btn-primary btn-xs" (click)="removeparcel()" size="3">Delete</button> -->
+           </ion-col>
+            <!-- <ion-col ion-button color="#1c6c77" class="signoutbutton" fill="solid" size="medium" expand="block"></ion-col>  -->
+            <!-- <ion-col button class="btn btn-primary btn-xs"  size="2"  (click)="removeparcel()">Delete</ion-col> -->
+            <!-- <ion-col class="table-cell" size="2">{{item.balance | number : '1.2-2' }}</ion-col> -->
+            
+  
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  
+    <ion-button class="signoutbutton" fill="solid"
+    (click)="signout()">Logout</ion-button>
+
+   
+ 
+</ion-content>
+
+
+
+
+      <!---MUST READ : https://forum.ionicframework.com/t/click-event-doesnt-work-while-input-element-is-focused/132898/2
+        <ion-icon item-end [name]=“passwordIcon” class=“passwordIcon” (click)=‘hideShowPassword()’>-->
+
+<!-- <ion-footer>
+
+  <div class="footercontainer">
+   -->
+  
+    <!--<ion-icon style="font-size: 30px ;" (click)="gochat()" name="chatbox-outline"></ion-icon>-->
+    <!-- <ion-icon style="font-size: 30px ;" (click)="signout()" class="signoutbutton" name="log-in-outline"></ion-icon> -->
+    <!-- <ion-icon style="font-size: 30px ;" (click)="calc()" class="calcbutton" name="calculator-outline"></ion-icon> -->
+
+  <!-- </div>
+   
+</ion-footer> -->
+

@@ -1,5 +1,7 @@
 {
   "name": "laudel",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

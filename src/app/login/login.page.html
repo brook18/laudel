@@ -1,0 +1,122 @@
+<!-- <ion-header>
+  <div class="login-header ion-padding">
+    <img class="logon-img" src="/assets/img/lau2.JPG" alt="">
+  </div>
+</ion-header> -->
+<ion-content>
+<div class="background-pic">
+  <div class="background-filter">
+    <!-- <div class="shape"><img src="../../assets/shape.svg" /></div> -->
+    <!-- <div class="login-header">
+      <img class="logon-img" src="/assets/img/lau.jpg" alt="">
+    </div> -->
+    
+  <ion-card>
+   
+    <ion-card-content>
+      
+    <!-- <p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out all details accurately.</p> -->
+
+    <form [formGroup]="validationFormUser" (ngSubmit)="LoginUser(validationFormUser.value)">
+   
+    <div class="input-group">
+        <ion-item>
+      
+       
+          <!-- <ion-input type="email" placeholder="Email" formControlName="email" [class.invalid]="!validationFormUser.controls.email.valid && (validationFormUser.controls.email.dirty || submitAttempt)"> -->
+          <ion-input type="email" placeholder="Email" formControlName="email" [class.invalid]="!validationFormUser.controls.email.valid && (validationFormUser.controls.email.dirty || validationFormUser.get('email').touched)">
+            <ion-icon name="mail-outline" ></ion-icon>
+          </ion-input>
+        </ion-item>
+         <!-- <ion-item *ngIf="!validationFormUser.controls.email.valid  && (validationFormUser.controls.email.dirty || submitAttempt)"> -->
+          <!-- <p>Please enter a valid email.</p> -->
+             <div>
+            <ng-container *ngFor="let validation of validationUserMessage.email">
+                <p class="error_message" *ngIf="validationFormUser.get('email').hasError(validation.type) && (validationFormUser.get('email').dirty || validationFormUser.get('email').touched)">
+                  {{validation.message}}
+                </p>
+           </ng-container>
+        </div>
+        <!-- </ion-item>  -->
+        
+        
+    
+        <ion-item>
+          <!-- <ion-input type="password" placeholder="*********" formControlName="password"> -->
+            
+        <ion-input type="password" placeholder="******" formControlName="password" [class.invalid]="!validationFormUser.controls.password.valid && (validationFormUser.controls.password.dirty || submitAttempt)">
+          <ion-icon name="lock-closed" ></ion-icon>
+        </ion-input>
+       </ion-item>
+       <!-- <ion-item *ngIf="!validationFormUser.controls.password.valid  && (validationFormUser.controls.password.dirty || submitAttempt)"> -->
+        <!-- <p>Please enter a valid email.</p> -->
+        <div>
+          <ng-container *ngFor="let validation of validationUserMessage.password">
+              <p class="error_message" *ngIf="validationFormUser.get('password').hasError(validation.type) && (validationFormUser.get('password').dirty || validationFormUser.get('password').touched)">
+                {{validation.message}}
+              </p>
+         </ng-container>
+      </div>
+      <!-- </ion-item> -->
+
+          <!-- <ion-item>
+
+          <ion-input type="password" name="password" formControlName="password"  placeholder="**************" >
+          <ion-icon name="lock-closed"></ion-icon>
+          </ion-input>
+          </ion-item>
+
+          <div>
+              <ng-container *ngFor="let validation of validationUserMessage.password">
+                   <div class="error_message" *ngIf="validationFormUser.get('password').hasError(validation.type) && (validationFormUser.get('password').dirty || validationFormUser.get('password').touched)">
+                      {{validation.message}}
+                   </div>
+               </ng-container>
+          </div> -->
+
+
+    <!-- <ion-item class="ion-pwd">
+      <ion-label position ='stacked'>Password</ion-label> 
+      
+            <ion-input name="password" placeholder="password" type="password" [(ngModel)]="user['passwordfield']">
+            <ion-icon class="ion-lock" name="lock-closed-outline" slot="start"></ion-icon>
+          </ion-input>
+        
+          <ion-icon [name]="(passwordfield == 'password') ? 'eye' : 'eye-off'" slot="end"
+      (click)="passwordfield = (passwordfield == 'password') ? 'text' : 'password';"></ion-icon>
+
+   
+    </ion-item> -->
+  
+    <p>
+    <ion-label class="ion-forget-password">Forget Password ?</ion-label>
+     </p> 
+  
+    
+    
+    <!--  <button (click)="login()" class="signin" ion-button round block>Sign In</button> -->
+      <!-- <ion-button color="#1c6c77" class="signin" fill="solid" size="medium" expand="block"
+      (click)="login()">LOGIN</ion-button> -->
+      <div class="bottom-section">
+      <!-- <div class="sign-btn-wrap"> -->
+        <ion-button type="submit"  fill="solid" [disabled]="!validationFormUser.valid" >Login</ion-button>
+        <!-- <ion-button (click)="navigateToLoginPage()">Sign In</ion-button> -->
+       </div>
+
+      <ion-label class="ion-text-noaccount" color="primary"> Don't have an account?
+        <span class="link-button" (click)="register()" color="primary">
+          <a routerLink>
+            Sign up</a></span></ion-label>
+        
+    <!-- <p class="bottom">Don't have an account?<a tappable color="primary">create one</a></p> -->
+ 
+    
+  </div>
+</form>
+
+</ion-card-content>
+</ion-card>
+</div>
+</div>
+</ion-content>
+

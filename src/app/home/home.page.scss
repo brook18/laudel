@@ -1,0 +1,212 @@
+
+ion-card-content{
+  margin-top: 30px;
+
+  ion-item{
+      --ion-item-background:transparent;
+      --border-width:0;
+      --inner-border-width:0;
+      --highlight-color-focused:none;
+      margin-bottom: 15px;
+
+      ion-input{
+          width:257px;
+          height: 42px;
+          border-radius: 15px;
+          border:  1px solid #198645;
+          font-size: 14px;
+          font-weight: 300;
+          color:#555B5B;
+          --padding-start:30px;
+      }
+
+  }
+
+  a{
+      text-decoration: none;
+      color:#589B3F;
+      font-weight: 300;
+      font-size: 13px;
+  }
+}
+
+
+.logon-img{
+    // display: flex;
+    display: block;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border-radius: 100%;    // to make the round picture
+   
+   
+  }
+  .container{
+    background-color: black;
+    display: flex;
+    width: 100vw;
+    justify-content: flex-start;
+    padding: 10px;
+    align-items: center;
+  }
+  
+
+.imgcontainer{
+    padding: 20px;
+    display: flex;
+     
+
+
+}
+.backbutton{
+    color:black;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+.title{
+    font-size: 25px;
+    font-weight: bold;
+    color:black;
+    padding: 15px;
+    margin-right: 10px;
+    justify-content: center;
+
+}
+
+// .uni-label {
+//   font-size: 25px;
+//   height: 30px;
+//   // padding-top: 50px;
+// }   
+
+// .unitno{
+//     font-size: 20px;
+//     margin-left: 50px;
+//     margin-right: 50px;
+//     margin-top: 30px; 
+//     // --background: rgb(197, 191, 191) !important;
+//   }
+ 
+//  .ion-input{
+// //     // border-radius: 10px !important;
+// //     padding-top: 30px;
+// //     // padding-right: 30px;
+// //     font-size: 0.9em;
+// //     // border: 1px solid #f1f1f1 !important;
+//  --background: rgb(197, 191, 191) !important;
+// //     /* height: 10%; */
+// //     /* width: 41%; */
+// //     max-width: 100vw; // this is applying perfectly
+// //     max-height: 10vh;
+// }
+.bottom-section{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ion-button{
+  height: 53px;
+  width: 247px;
+  font-size: 14px;
+  text-transform: none;
+  --background:#198645;
+    font-weight: 400;
+  --border-radius: 15px !important;
+    color:#fff;
+  }
+
+  span{
+      margin-top: 10px;
+      font-weight: 330;
+      a{
+          font-weight: 400;
+      }
+  }
+  }
+
+// }
+.uni-label {
+  font-size: 18px;
+  height: 30px;
+  // padding-top: 50px;
+}   
+
+.track-label {
+  font-size: 18px;
+  height: 30px;
+  // padding-top: 50px;
+}   
+
+.unitno{
+    font-size: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px; 
+    
+    // --background: rgb(197, 191, 191) !important;
+  }
+
+  .trackno{
+      font-size: 15px;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 30px; 
+      // --background: rgb(197, 191, 191) !important;
+    }
+
+
+    .text-content {
+      font-size: 12px;
+    }
+    .text-content-small {
+      font-size: 10px;
+    }
+    .table-header {
+      border-color: rgb(255, 255, 255);
+      border-width: 0.00001em;
+      border-style: solid;
+      margin-bottom: -1px;
+      // background-color: #3773f5;
+      background-color: #198645;
+      font-size: 13px;
+      justify-content: center;
+      color: white;
+      
+    }
+    .table-cell {
+      border-color: rgb(0, 0, 0);
+      border-width: 0.00001em;
+      border-style: solid;
+      margin-bottom: -1px;
+      justify-content: center;
+    }
+
+ 
+
+  .signoutbutton{
+    // background-color: fade-in($color: #3773f5, $amount: 0);;
+    justify-content: center;         //make the logon-img postion in center 
+    display: flex;                   //make the logon-img postion in center
+    border-radius: 100px;
+    //width: calc(100vw - 20px - 20px);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 250px;
+  }
+
+  .submit{
+    // background-color: fade-in($color: #3773f5, $amount: 0);;
+    justify-content: center;         //make the logon-img postion in center 
+    display: flex;                   //make the logon-img postion in center
+    border-radius: 100px;
+    //width: calc(100vw - 20px - 20px);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+  }

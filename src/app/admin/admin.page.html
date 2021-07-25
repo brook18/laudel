@@ -1,0 +1,128 @@
+<ion-header>
+  <!-- <ion-toolbar>
+  <ion-title>admin</ion-title> 
+    <h2 class="title">admin</h2>
+  </ion-toolbar> -->
+
+  <div class="bar bar-header bar-energized">
+    <h2 class="title">admin</h2>
+  </div>
+</ion-header>
+
+<ion-content padding>
+    
+  <ion-item class="unitno">
+    <ion-label stacked class="uni-label" position="stacked">Enter Unit No :</ion-label>
+      <ion-input name="unitno" placeholder="Unit Number" type="text" [(ngModel)]="postObj['unitno']"></ion-input>
+    </ion-item>
+
+    <ion-item class="trackno">
+      <ion-label stacked class="track-label" position="stacked">Tracking No :</ion-label>
+        <ion-input name="trackno" placeholder="Last 4 digit of Tracking No" type="text" [(ngModel)]="postObj['trackno']" required></ion-input>
+      </ion-item>
+    <!-- <ion-item>
+      <ion-label>Notes</ion-label>
+      <ion-textarea [(ngModel)]="postObj['text']" rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+    </ion-item> -->
+
+    <div class="submit">
+    
+    <ion-button (click)="addparcel()" class="btn btn-primary btn-xs" >Add to list</ion-button>
+  </div>
+
+
+  
+       
+  <div class="table-head">
+    <h4>Parcel list</h4>
+    <!-- <table class="table"> -->
+      <!-- <thead>
+        <tr>
+            <th>UnitNo</th>
+            <th>Tracking No</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+        <tbody>
+            
+            <tr *ngFor="let item of postObjarry; let idx = index" style="margin-bottom: 10px;">
+                <! <td>{{item.unitno}}</td>  -->
+                <!-- <td>
+                  <input [(ngModel)]="item.unitno" class="form-control" type="text" name="{{item.unitno}}" />
+              </td>
+              <td>
+                <input [(ngModel)]="item.trackno" class="form-control" type="text" name="{{item.trackno}}" />
+            </td>
+            <td>
+              <input [(ngModel)]="item.date" class="form-control" type="text" name="{{item.date}}" />
+            </td>
+
+            <td>
+              <button class="btn btn-primary btn-xs" (click)="removeparcel()">Delete</button>
+            </td> -->
+              <!-- <button class="button" ng-click="ctrl.add($index)">Add</button></div> -->
+            
+            <!-- <td>
+            <input [(ngModel)]="item.trackno" class="form-control" type="text" name="{{item.trackno}}" />
+           </td>  -->
+                <!-- <td>{{item.trackno}}</td>  -->
+                <!-- <td><button class="btn btn-primary btn-xs" (click)="removeContact(contact)">Delete</button></td> -->
+            <!-- </tr>
+        </tbody>  -->
+    <!-- </table> -->
+  </div>
+
+    
+    <!-- <div class="addContactControls">
+        <input #name placeholder="name" />
+        <input #phone placeholder="phone" />
+        <button class="btn btn-primary btn-xs" (click)="addContact(name,phone)">Add Contact</button>
+    </div> -->
+
+    <!-- <ion-content [fullscreen]="true">
+      <ion-grid> -->
+
+ <ion-grid>
+  <ion-row size ='5'>
+	<ion-col size="12" class="ion-padding-top">
+        <ion-row>
+          <!-- <ion-col class="table-header" size="1"><b>#</b></ion-col> -->
+          <ion-col class="table-header" size="3"><b>Unit No</b></ion-col>
+          <ion-col class="table-header" size="3"><b>Tracking No</b></ion-col>
+          <ion-col class="table-header" size="3"><b>Date</b></ion-col>  
+          <ion-col class="table-header" size="3"><b>Action</b></ion-col>
+        </ion-row>
+
+
+        <ion-row *ngFor="let item of postObjarry; let idx = index" class="text-content">
+          <!-- <ion-col class="table-cell text-content-small" size="1">{{idx + 1}}</ion-col> -->
+          <ion-col class="table-cell" size="3">{{item.unitno}}</ion-col>
+          <ion-col class="table-cell" size="3">{{item.trackno}}</ion-col>
+          <!-- <ion-col class="table-cell" size="3">{{item.mydate}}</ion-col> -->
+          <ion-col class="table-cell" size="3">{{item.tdate | date: 'yyyy-MM-dd'}}</ion-col>
+          <ion-col class="table-cell" size="3">
+          <button class="btn btn-primary btn-xs" (click)="removeparcel()" size="3">Delete</button>
+         </ion-col>
+          <!-- <ion-col ion-button color="#1c6c77" class="signoutbutton" fill="solid" size="medium" expand="block"></ion-col>  -->
+          <!-- <ion-col button class="btn btn-primary btn-xs"  size="2"  (click)="removeparcel()">Delete</ion-col> -->
+          <!-- <ion-col class="table-cell" size="2">{{item.balance | number : '1.2-2' }}</ion-col> -->
+          
+
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div>
+  <!-- <ion-button (click)="postnow(unitno,trackno)" fill="outline"> Submit </ion-button> -->
+  <ion-button (click)="postnow()" fill="outline"> Submit </ion-button>
+</div>
+<div>
+  <ion-button class="signoutbutton" fill="solid"
+(click)="signout()">Logout</ion-button>
+</div>
+
+
+</ion-content>
+
